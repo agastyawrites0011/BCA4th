@@ -10,3 +10,13 @@ git clone "repository url" https://github.com/agastyawrites0011/BCA4th.git
 ```bash
 git init 
 ```
+3. For committing any changes in file
+```bash
+git commit -m "Adding new comment"
+```
+
+4. For pushing data into github
+
+```bash
+git push
+```
