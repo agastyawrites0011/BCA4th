@@ -1,0 +1,28 @@
+//Write JS Program to highlight all of the words over eight characters long in the paragraph text(with a red background).
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .long-word{
+            background-color: red;
+            color: #fff;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Javascript manipulation lets us dynamically emphasize extraordinarily length terminology within paragraphs for 
+        demonstration purposes. 
+    </p>
+    <script>
+        document.querySelectorAll('p').forEach(p => {
+            p.innerHTML = p.innerHTML.replace(/\b(\w{9,})\b/g, '<span class="long-word">$1</span>');
+        });
+    </script>
+</body>
+</html>
