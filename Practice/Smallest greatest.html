@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Smallest and Greatest Among Ten Numbers </h1>
+    <script>
+    let numbers=[13,25,46,169,100,125,513,604,345,600,300];
+
+    if (numbers.length > 0) {
+        let smallest = numbers[0];
+        let greatest = numbers[0];
+
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] < smallest) {
+                smallest = numbers[i];
+            }
+            if (numbers[i] > greatest) {
+                greatest = numbers[i];
+            }
+        }
+
+        document.write("Smallest number is: " + smallest + "<br>");
+        document.write("Greatest number is: " + greatest);
+    }
+    </script>
+</body>
+</html>
