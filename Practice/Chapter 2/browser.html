@@ -1,0 +1,49 @@
+<body>
+
+<h2>Location Object Demo</h2>
+
+<p id="url"></p>
+
+<button onclick="goToGoogle()">Go to
+Google</button>
+
+<button onclick="goToGithub()">Go to
+GitHub</button>
+
+<button onclick="reloadPage()">Reload
+Page</button>
+
+<script>
+
+// Show current URL
+
+document.getElementById("url").textContent =
+"Current URL: " + location.href;
+
+// Go to Google
+
+function goToGoogle() {
+
+location.href = "https://www.google.com";
+
+}
+
+// Go to GitHub
+
+function goToGithub() {
+
+location.href = "https://www.github.com";
+
+}
+
+// Reload page
+
+function reloadPage() {
+
+location.reload();
+
+}
+
+</script>
+
+</body>
