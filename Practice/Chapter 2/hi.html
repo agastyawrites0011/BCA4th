@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unified Interface</title>
+</head>
+<body>
+  <h2>Location Object Demo</h2>
+  <p id="url"></p>
+
+  <button onclick="goToGoogle()">Go to Google</button>
+  <button onclick="goToGithub()">Go to GitHub</button>
+  <button onclick="goToFacebook()">Go to Facebook</button>
+  <button onclick="reloadPage()">Reload Page</button>
+
+  <hr>
+
+  <h2>Main Page with Iframe</h2>
+  <iframe id="myFrame" src="page.html" width="400" height="200"></iframe>
+  <br><br>
+  <button onclick="readFrame()">Read Iframe Content</button>
+
+  <script>
+    // Show current URL
+    document.getElementById("url").textContent = "Current URL: " + location.href;
+
+    // Go to Google
+    function goToGoogle() { location.href = "https://www.google.com"; }
+
+    // Go to GitHub
+    function goToGithub() { location.href = "https://www.github.com"; }
+
+    // Go to Facebook
+    function goToFacebook() { location.href = "https://www.facebook.com"; }
+
+    // Reload page
+    function reloadPage() { location.reload(); }
+
+    // Read iframe content
+    function readFrame() {
+      let frame = document.getElementById("myFrame");
+      let frameDoc = frame.contentWindow.document;
+      let text = frameDoc.getElementById("msg").innerText;
+      alert("Message inside iframe: " + text);
+    }
+  </script>
+</body>
+</html>

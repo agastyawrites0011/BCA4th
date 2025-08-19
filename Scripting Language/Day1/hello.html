@@ -1,0 +1,22 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title> My Page </title>
+</head>
+<body>
+    <p id="para"></p>
+    <script>
+        var x=parseInt(prompt("Enter a number:"));
+         var y=parseInt(prompt("Enter a number:"));
+          var z=parseInt(prompt("Enter a number:")); 
+          if(x>y&&x>z)
+          document.getElementById("para").innerHTML="The largest number is:" +x;
+        if(y>z&&y>x)
+          document.getElementById("para").innerHTML="The largest number is:" +y;
+        else
+        document.getElementById("para").innerHTML="The largest number is:" +z;
+    </script>
+</body>
+</html>
