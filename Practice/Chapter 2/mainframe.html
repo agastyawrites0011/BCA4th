@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <body>
+    <h2>Main Page</h2>
+
+    <!-- Load another page inside iframe -->
+    <iframe id="myFrame" src="page.html" width="400" height="200"></iframe>
+
+    <br><br>
+
+    <!-- Button to read iframe content -->
+    <button onclick="readFrame()">Read Iframe Content</button>
+
+    <script>
+        function readFrame() {
+            let frame = document.getElementById("myFrame");
+            let frameDoc = frame.contentWindow.document;
+            let text = frameDoc.getElementById("msg").innerText;
+            alert("Message inside iframe: " + text);
+        }
+    </script>
+</body>
+</html>

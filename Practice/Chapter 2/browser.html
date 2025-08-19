@@ -1,49 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <body>
+ <body>
+  <h2>Location Object Demo</h2>
+  <p id="url"></p>
 
-<h2>Location Object Demo</h2>
+  <button onclick="goToGoogle()">Go to Google</button>
+  <button onclick="goToGithub()">Go to GitHub</button>
+  <button onclick="goToFacebook()">Go to Facebook </button>
+  <button onclick="reloadPage()">Reload Page</button>
 
-<p id="url"></p>
+  <script>
+    // Show current URL
+    document.getElementById("url").textContent = "Current URL: " + location.href;
 
-<button onclick="goToGoogle()">Go to
-Google</button>
+    // Go to Google
+    function goToGoogle() {
+      location.href = "https://www.google.com";
+    }
 
-<button onclick="goToGithub()">Go to
-GitHub</button>
+    // Go to GitHub
+    function goToGithub() {
+      location.href = "https://www.github.com";
+    }
 
-<button onclick="reloadPage()">Reload
-Page</button>
+    // Go to Facebook
+    function goToFacebook() {
+      location.href = "https://www.facebook.com";
+    }
 
-<script>
-
-// Show current URL
-
-document.getElementById("url").textContent =
-"Current URL: " + location.href;
-
-// Go to Google
-
-function goToGoogle() {
-
-location.href = "https://www.google.com";
-
-}
-
-// Go to GitHub
-
-function goToGithub() {
-
-location.href = "https://www.github.com";
-
-}
-
-// Reload page
-
-function reloadPage() {
-
-location.reload();
-
-}
-
-</script>
-
+    // Reload page
+    function reloadPage() {
+      location.reload();
+    }
+  </script>
 </body>
+</html>
